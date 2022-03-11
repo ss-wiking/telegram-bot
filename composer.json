@@ -1,0 +1,51 @@
+{
+    "name": "ss-wiking/telegram-bot",
+    "description": "Working with Telegram bots has never been easier",
+    "keywords": [
+        "ss-wiking",
+        "telegram-bot"
+    ],
+    "homepage": "https://github.com/ss-wiking/telegram-bot",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Darii Kliementiev",
+            "email": "ss.wiking@outlook.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^v8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SsWiking\\TelegramBot\\": "src",
+            "SsWiking\\TelegramBot\\Database\\Factories\\": "database/factories"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SsWiking\\TelegramBot\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit tests",
+        "test-coverage": "vendor/bin/phpunit tests --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SsWiking\\TelegramBot\\Providers\\TelegramBotServiceProvider"
+            ]
+        }
+    }
+}
